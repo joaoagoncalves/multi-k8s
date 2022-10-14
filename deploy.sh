@@ -1,6 +1,6 @@
-docker build -t jagoncalves/multi-client:latest -t jagoncalves/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t jagoncalves/multi-server:latest -t jagoncalves/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t jagoncalves/multi-worker:latest -t jagoncalves/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t jagoncalves/multi-client:latest -t jagoncalves/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t jagoncalves/multi-server:latest -t jagoncalves/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t jagoncalves/multi-worker:latest -t jagoncalves/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push jagoncalves/multi-client:latest
 docker push jagoncalves/multi-server:latest
 docker push jagoncalves/multi-worker:latest
